@@ -1,0 +1,23 @@
+class Solution {
+    public List<Boolean> kidsWithCandies(int[] candies, int extraCandies) {
+
+        //find the maximum number of candies a kid has and check with the conditions of (extacandies + candies) if it satisfies should be greater than or equal to max
+        List<Boolean> r= new ArrayList<>();//creating a array list of r
+        int max = candies[0],n=candies.length;
+        for(int i=1;i<n;i++){
+            if(candies[i]>max){
+                max= candies[i];
+            }//calcualting maximum number
+        
+        }
+        for(int i:candies){
+            if(i+extraCandies>=max){
+                r.add(true);
+            }//using for each loop to iterate and append to the array list
+            else{
+                r.add(false);
+            }
+        }
+        return r;
+    }
+}
