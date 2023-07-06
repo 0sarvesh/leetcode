@@ -1,0 +1,12 @@
+class Solution {
+    public int maximumWealth(int[][] accounts) {
+       int  n = accounts.length;
+       int wealth =0;
+       for(int[]arr:accounts){
+           int sum = Arrays.stream(arr).sum();
+           wealth =Math.max(wealth,sum);//comapares wealtth and sum and returns the max
+
+       }
+       return wealth;
+    }
+}
