@@ -1,0 +1,16 @@
+class Solution {
+    public int numIdenticalPairs(int[] nums) {
+       int [] count = new int [1000];
+       
+       //for each loop iterates over every element and finds itts number of occurances
+       for (int num :nums){
+           count[num]++;
+       }
+     int total = 0;
+     //using nCn formula finding the pairs and incrementing it
+     for(int i :count){
+         total += ((i)*(i-1))/2;
+     }
+     return total;
+    }
+}
