@@ -1,0 +1,24 @@
+class Solution {
+    public int[] leftRightDifference(int[] nums) {
+     int  n = nums.length;
+     int [] left = new int [n];
+     int [] right = new int [n];
+     int [] ans = new int [n];
+     int i;//initializing arrrays and variables
+
+     for(i=1;i<n;i++){
+       left[i]=left[i-1]+nums[i-1];// calculates the left most side starting with 1
+     }
+     for(i=n-2;i>=0;i--){
+       right[i]=right[i+1]+nums[i+1];// calculates the right most side starting with 1
+     }
+
+    for(i=0;i<n;i++){
+        ans[i]=Math.abs(left[i]-right[i]);// calculates the ans 
+
+    }
+   return ans;
+        
+    }
+   
+}
