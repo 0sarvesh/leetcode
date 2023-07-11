@@ -1,0 +1,19 @@
+class Solution {
+    public int[] decompressRLElist(int[] nums) {
+        int len = 0;
+        int i,j;
+        for (i =0 ;i<nums.length;i+=2){
+            len += nums[i];
+        }// increments by 2 eg::[1,2,3,4] ==>[1+3]==>4
+        int [] result = new int [len];
+        int incre = 0;
+        for(i = 0;i<nums.length;i+=2){
+            for(j = 0;j<nums[i];j++){
+               result[incre] = nums[i+1];//prints according to the frequency
+               incre++; //gets incremented
+                }
+
+        }
+        return result;
+    }
+}
