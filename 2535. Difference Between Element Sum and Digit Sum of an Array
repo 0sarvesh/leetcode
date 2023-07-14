@@ -1,0 +1,14 @@
+class Solution {
+    public int differenceOfSum(int[] nums) {
+        int dgs = 0;
+        int init =0 ;
+        for(int i:nums){
+            init+=i;
+            while(i>0){
+              dgs+=i%10;//consists of numb which index is >1,eg15  gives 5
+              i = i/10;//consists of numb which index is >1,eg15  gives 1
+            }
+        }
+        return Math.abs(init-dgs);
+    }
+}
