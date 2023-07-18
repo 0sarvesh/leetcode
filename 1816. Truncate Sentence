@@ -1,0 +1,17 @@
+class Solution {
+    public String truncateSentence(String s,  int k) {
+        String [] arr =s.split(" ");//splits according to space
+        String g="";//assigns a string to carry a array
+        for(int i =0;i<k;i++){
+             g = g+arr[i];//prints ""+arr[i]
+             if(i!=k-1){
+                 g =g+" ";//appends with a space for every elements
+             }
+        }
+         return g ;
+
+         } 
+       
+      
+    
+}
