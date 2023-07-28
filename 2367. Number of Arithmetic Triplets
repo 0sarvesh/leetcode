@@ -1,0 +1,15 @@
+class Solution {
+    public int arithmeticTriplets(int[] nums, int diff) {
+        ArrayList<Integer> arr = new ArrayList<>();
+        int count =0;
+        for(int i:nums){
+            arr.add(i);// iterates and returns in arraylist
+        }
+        for(int i:arr){
+            if(arr.contains(i+diff) && arr.contains(i+diff+diff)){//checks whether j & k are present
+                count++;
+            }
+        }
+        return count;
+    }
+}
