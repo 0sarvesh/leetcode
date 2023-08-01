@@ -1,0 +1,24 @@
+class Solution {
+    public int[][] flipAndInvertImage(int[][] image) {
+       int n = image.length;
+        int m = image[0].length;
+        int [][]arr =new int [n][m];
+        for(int i =0;i<n;i++){
+            for(int j=0;j<n;j++){
+                arr[i][j] = image[i][m-j-1];//iterates and finds[0][3-0-1];
+
+            }
+
+        }
+        for(int i =0;i<n;i++){
+            for(int j=0;j<n;j++){
+                arr[i][j] =arr[i][j]==0?1:0;//checks for condition
+
+            }
+
+        }
+        return arr;
+       
+        
+    }
+}
